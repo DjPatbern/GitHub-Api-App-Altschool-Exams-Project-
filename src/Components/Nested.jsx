@@ -57,7 +57,7 @@ useEffect(() => {
         <p><b>Created At:</b> {repo.created_at}</p>
         <p><b>Updated At:</b> {repo.updated_at}</p>
 <Link className='btn btn-primary back-link' to='/repos'>Back</Link>
-        <b><a href={repo.svn_url}>➡ Go To Repo Here</a></b>
+        <b><a href={repo.svn_url} target='_blank'>➡ Go To Repo Here</a></b>
 </div>
 
 

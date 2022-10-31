@@ -23,7 +23,7 @@ const [isOpen, setOpen] = useState(false)
   return (
     <div className="container 	">
 
-      <header className="header bg-primary"> <a href='/' ><AiFillGithub />Repo App </a> 
+      <header className="header bg-primary"> <a href='/' className='logo' ><AiFillGithub />Repo App </a> 
       <div className="dropdown">
         <Hamburger toggle={() => setOpen(prevOpen => !prevOpen)} 
         rounded toggled={isOpen}/>
