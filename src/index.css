@@ -22,7 +22,8 @@ header .logo {
 }
 
 header a:hover {
-  color: rgb(175, 201, 218);
+  background-color: rgb(175, 201, 218);
+  color: rgb(16, 100, 156);
 
 }
 
@@ -100,7 +101,7 @@ code {
 .each-repo:hover {
   background-color: rgb(175, 201, 218);
   padding: 14px;
-  color: white;
+  color: rgb(16, 100, 156);
 }
 
 .repo-links {
@@ -390,6 +391,7 @@ h2 {
     .error-page img{
       width: 90%;
       height: 70vh;
+      margin-top: -20%;
     }
 
 
@@ -451,6 +453,7 @@ h2 {
 .error-page img{
   width: 90%;
   height: 70vh;
+  margin-top: -20%;
 }
 
 }

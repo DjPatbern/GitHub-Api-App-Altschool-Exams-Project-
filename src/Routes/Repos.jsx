@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 
 
 function Repos() {
-  const [loading, setLoading] = useState(false);
-  const [repos, setRepos] = useState([]);
-  const [pageNumber, setPageNumber] = useState(0);
-  const reposPerPage = 6;
+  const [loading, setLoading] = useState(false); //for Loading state while awaiting api call
+  const [repos, setRepos] = useState([]); // State to hold repositories
+  const [pageNumber, setPageNumber] = useState(0); // Pagination state
+  const reposPerPage = 6; // Repositories to be displayed per page
   const pagesVisited = pageNumber * reposPerPage;
 
   useEffect(() => {
@@ -23,13 +23,7 @@ function Repos() {
       });
   }, []);
 
-  // const displayRepo = repos.map((repo) => (
-  //   <div>
-  //     {repo.name}
-  //     {repo.id}
-  //     {repo.html_url}
-  //   </div>
-  // ))
+
 
   const pageCount = Math.ceil(repos.length / reposPerPage);
 
@@ -45,7 +39,8 @@ function Repos() {
           name="description"
           content="This is the page showing all my GitHub Repositories"
         />
-      </Helmet>
+        <link rel="canonical" href="/repos" />
+      </Helmet> 
 
       <motion.div 
     initial={{ width: 0 }}
@@ -57,18 +52,20 @@ function Repos() {
                 .slice(pagesVisited, pagesVisited + reposPerPage)
                 .map((repo) => {
                   return (
+                    <Link to={`/repos/${repo.name}`} className="repo-links">
                     <div key={repo.id} className="each-repo">
-                      <Link to={`/repos/${repo.name}`} className="repo-links">
+                      
                         {repo.name}
-                      </Link>
+                      
                     </div>
+                    </Link>
                   );
                 })
             : <Loading />
             }
         </div>
 
-        <div className="pagination" data-aos="fade-up" data-aos-delay="100">{
+        <div className="pagination">{
           loading ? <ReactPaginate
           previousLabel={"Previous"}
           nextLabel={"Next"}
@@ -89,3 +86,9 @@ function Repos() {
 }
 
 export default Repos;
+
+// RETURN BLOCK CODE EXPLANATIONS...
+//1.) Helmet block carries my SEO implementation codes.
+//2.) Motive.Div is used to implement React Framer Motion for page changing animations.
+//3.) data-aos is an implemented tools for components animations on the page
+//4.) Imported Loading from my Component folder and used it ternary Operation to implement it

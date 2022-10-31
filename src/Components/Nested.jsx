@@ -9,9 +9,9 @@ import { motion } from "framer-motion";
 
 
 function Nested() {
-  const params = useParams()
-  const [repo, setRepo] = useState({})
-  const [loading, setLoading] = useState(false);
+  const params = useParams() //Params for nested repositories
+  const [repo, setRepo] = useState({}) // state to hold the datas of each repository
+  const [loading, setLoading] = useState(false); //Loading state to await api call
 
 
 
@@ -23,7 +23,6 @@ useEffect(() => {
       setRepo(response.data)
       setLoading(true)
     })
-    console.log('params ',repo)
 },[params])
 
 
@@ -32,9 +31,9 @@ useEffect(() => {
   return (
     <>
       <Helmet>
-        <title>{repo.name}</title>
-        <meta name="description" content="This is the home page of the GitHub API Fetch Web Application" />
-       
+        <title>{`${repo.name} - GitHub API App`}</title>
+        <meta name="description" content={`This is the repository showing ${repo.name} datas`} />
+        <link rel="canonical" href={`/repos/${repo.name}`} />
       </Helmet>
 
       
@@ -43,9 +42,10 @@ useEffect(() => {
     initial={{ width: 0 }}
     animate={{ width: '100%' }}
     exit={{ x: window.innerWidth, transition: {duration: 0.1} }} className='nested'> {loading ?<div key={repo.id} className='repo-datas' data-aos="fade-up" data-aos-delay="100">
-        <img src='https://avatars.githubusercontent.com/u/99277508?v=4' alt='' className='repo-avatar' />
+        <img src='https://avatars.githubusercontent.com/u/99277508?v=4' alt='Owners Profile Picture' className='repo-avatar' />
 <div className='details-grid'>
 <p><b>Name:</b> {repo.name}</p>
+
         
         <p><b>id:</b> {repo.id}</p>
         <p><b>Description:</b> {repo.description}</p>
@@ -76,3 +76,10 @@ useEffect(() => {
 }
 
 export default Nested
+
+
+// RETURN BLOCK CODE EXPLANATIONS...
+//1.) Helmet block carries my SEO implementation codes.
+//2.) Motive.Div is used to implement React Framer Motion for page changing animations.
+//3.) data-aos is an implemented tools for components animations on the page
+//4.) Imported Loading from my Component folder and used it ternary Operation to implement it
