@@ -1,0 +1,110 @@
+[debug] [2022-10-31T21:14:51.016Z] ----------------------------------------------------------------------
+[debug] [2022-10-31T21:14:51.020Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DJ PATBERN\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-31T21:14:51.021Z] CLI Version:   11.15.0
+[debug] [2022-10-31T21:14:51.021Z] Platform:      win32
+[debug] [2022-10-31T21:14:51.021Z] Node Version:  v16.14.2
+[debug] [2022-10-31T21:14:51.023Z] Time:          Mon Oct 31 2022 22:14:51 GMT+0100 (West Africa Standard Time)
+[debug] [2022-10-31T21:14:51.023Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-31T21:14:51.153Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-31T21:14:51.154Z] > authorizing via signed-in user (victorbernardpatrick@gmail.com)
+[debug] [2022-10-31T21:14:51.154Z] [iam] checking project github-api-app-f4834 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-31T21:14:51.158Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/github-api-app-f4834:testIamPermissions [none]
+[debug] [2022-10-31T21:14:51.159Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/github-api-app-f4834:testIamPermissions x-goog-quota-user=projects/github-api-app-f4834
+[debug] [2022-10-31T21:14:51.159Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/github-api-app-f4834:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-31T21:14:53.037Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/github-api-app-f4834:testIamPermissions 200
+[debug] [2022-10-31T21:14:53.038Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/github-api-app-f4834:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-31T21:14:53.042Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/github-api-app-f4834 [none]
+[debug] [2022-10-31T21:14:54.612Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/github-api-app-f4834 200
+[debug] [2022-10-31T21:14:54.613Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/github-api-app-f4834 {"projectId":"github-api-app-f4834","projectNumber":"958898516382","displayName":"GitHub API App","name":"projects/github-api-app-f4834","resources":{"hostingSite":"github-api-app-f4834"},"state":"ACTIVE","etag":"1_77a7abea-5614-455d-a604-7caeee92f608"}
+[info] 
+[info] === Deploying to 'github-api-app-f4834'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-31T21:14:54.630Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions [none]
+[debug] [2022-10-31T21:14:54.631Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-10-31T21:14:57.329Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions 200
+[debug] [2022-10-31T21:14:57.330Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions {"name":"projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[github-api-app-f4834]: beginning deploy... 
+[info] i  hosting[github-api-app-f4834]: found 13 files in build 
+[debug] [2022-10-31T21:14:57.362Z] [hosting] uploading with 200 concurrency
+[debug] [2022-10-31T21:14:57.862Z] [hosting] hash cache [YnVpbGQ] stored for 13 files
+[debug] [2022-10-31T21:14:57.863Z] [hosting][hash queue][FINAL] {"max":460,"min":5,"avg":49.07692307692308,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":477}
+[debug] [2022-10-31T21:14:57.864Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745:populateFiles [none]
+[debug] [2022-10-31T21:14:57.864Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9\r","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b\r","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331\r","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a\r","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49\r","/sitemap.txt":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e\r","/asset-manifest.json":"d8bc41aa2f79831f7c9659f9cef298ecf64ed5a5fb709d3306179bd6cc287226","/index.html":"06feefadb863edc6953fd3e806ba655ab2eead079f36925e4ddafaf1e300d57d","/static/css/main.d88d3fef.css":"87d82dda53cde25b3d4639a27cbfd963e1864d679ea0139776e07683a77c44e9","/static/css/main.d88d3fef.css.map":"ea5931fd8bdcf2fc48210fc505208b1d18c67aa47ed7d97dc462deb341e5512d","/static/js/main.12716416.js.LICENSE.txt":"35f632e255323268219581ddbcb6bafdd1510907324383b1f98586f89fb4f534","/static/js/main.12716416.js":"b3bdb97b99476af26e59cdca59ab559a4f66488cd6a2e7b209215eb08b6f714b","/static/js/main.12716416.js.map":"c10343a69cc7474338b0bb4a709f712f9bcadfb9bada2ab23d3743d079a408fc"}}
+[debug] [2022-10-31T21:15:00.330Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745:populateFiles 200
+[debug] [2022-10-31T21:15:00.330Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745:populateFiles {"uploadRequiredHashes":["c10343a69cc7474338b0bb4a709f712f9bcadfb9bada2ab23d3743d079a408fc","06feefadb863edc6953fd3e806ba655ab2eead079f36925e4ddafaf1e300d57d","87d82dda53cde25b3d4639a27cbfd963e1864d679ea0139776e07683a77c44e9","d8bc41aa2f79831f7c9659f9cef298ecf64ed5a5fb709d3306179bd6cc287226","ea5931fd8bdcf2fc48210fc505208b1d18c67aa47ed7d97dc462deb341e5512d","b3bdb97b99476af26e59cdca59ab559a4f66488cd6a2e7b209215eb08b6f714b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files"}
+[debug] [2022-10-31T21:15:00.336Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/c10343a69cc7474338b0bb4a709f712f9bcadfb9bada2ab23d3743d079a408fc [none]
+[debug] [2022-10-31T21:15:00.337Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/c10343a69cc7474338b0bb4a709f712f9bcadfb9bada2ab23d3743d079a408fc [stream]
+[debug] [2022-10-31T21:15:00.340Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/06feefadb863edc6953fd3e806ba655ab2eead079f36925e4ddafaf1e300d57d [none]
+[debug] [2022-10-31T21:15:00.340Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/06feefadb863edc6953fd3e806ba655ab2eead079f36925e4ddafaf1e300d57d [stream]
+[debug] [2022-10-31T21:15:00.344Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/87d82dda53cde25b3d4639a27cbfd963e1864d679ea0139776e07683a77c44e9 [none]
+[debug] [2022-10-31T21:15:00.344Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/87d82dda53cde25b3d4639a27cbfd963e1864d679ea0139776e07683a77c44e9 [stream]
+[debug] [2022-10-31T21:15:00.346Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/d8bc41aa2f79831f7c9659f9cef298ecf64ed5a5fb709d3306179bd6cc287226 [none]
+[debug] [2022-10-31T21:15:00.347Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/d8bc41aa2f79831f7c9659f9cef298ecf64ed5a5fb709d3306179bd6cc287226 [stream]
+[debug] [2022-10-31T21:15:00.349Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/ea5931fd8bdcf2fc48210fc505208b1d18c67aa47ed7d97dc462deb341e5512d [none]
+[debug] [2022-10-31T21:15:00.349Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/ea5931fd8bdcf2fc48210fc505208b1d18c67aa47ed7d97dc462deb341e5512d [stream]
+[debug] [2022-10-31T21:15:00.354Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/b3bdb97b99476af26e59cdca59ab559a4f66488cd6a2e7b209215eb08b6f714b [none]
+[debug] [2022-10-31T21:15:00.354Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/b3bdb97b99476af26e59cdca59ab559a4f66488cd6a2e7b209215eb08b6f714b [stream]
+[debug] [2022-10-31T21:15:00.356Z] [hosting][populate queue][FINAL] {"max":2476,"min":2476,"avg":2476,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2496}
+[debug] [2022-10-31T21:15:00.357Z] [hosting] uploads queued: 6
+[debug] [2022-10-31T21:15:04.483Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/87d82dda53cde25b3d4639a27cbfd963e1864d679ea0139776e07683a77c44e9 200
+[debug] [2022-10-31T21:15:04.483Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/87d82dda53cde25b3d4639a27cbfd963e1864d679ea0139776e07683a77c44e9 [stream]
+[debug] [2022-10-31T21:15:05.695Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/06feefadb863edc6953fd3e806ba655ab2eead079f36925e4ddafaf1e300d57d 200
+[debug] [2022-10-31T21:15:05.696Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/06feefadb863edc6953fd3e806ba655ab2eead079f36925e4ddafaf1e300d57d [stream]
+[debug] [2022-10-31T21:15:05.704Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/ea5931fd8bdcf2fc48210fc505208b1d18c67aa47ed7d97dc462deb341e5512d 200
+[debug] [2022-10-31T21:15:05.704Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/ea5931fd8bdcf2fc48210fc505208b1d18c67aa47ed7d97dc462deb341e5512d [stream]
+[debug] [2022-10-31T21:15:05.894Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/d8bc41aa2f79831f7c9659f9cef298ecf64ed5a5fb709d3306179bd6cc287226 200
+[debug] [2022-10-31T21:15:05.894Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/d8bc41aa2f79831f7c9659f9cef298ecf64ed5a5fb709d3306179bd6cc287226 [stream]
+[debug] [2022-10-31T21:15:06.460Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/b3bdb97b99476af26e59cdca59ab559a4f66488cd6a2e7b209215eb08b6f714b 200
+[debug] [2022-10-31T21:15:06.461Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/b3bdb97b99476af26e59cdca59ab559a4f66488cd6a2e7b209215eb08b6f714b [stream]
+[debug] [2022-10-31T21:15:06.961Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/c10343a69cc7474338b0bb4a709f712f9bcadfb9bada2ab23d3743d079a408fc 200
+[debug] [2022-10-31T21:15:06.961Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/github-api-app-f4834/versions/7c4de743042a9745/files/c10343a69cc7474338b0bb4a709f712f9bcadfb9bada2ab23d3743d079a408fc [stream]
+[debug] [2022-10-31T21:15:06.962Z] [hosting][upload queue][FINAL] {"max":6631,"min":4150,"avg":5533.333333333333,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":6631}
+[info] +  hosting[github-api-app-f4834]: file upload complete 
+[debug] [2022-10-31T21:15:06.965Z] [hosting] deploy completed after 9631ms
+[debug] [2022-10-31T21:15:06.975Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "github-api-app-f4834"
+    },
+    "version": "projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745"
+  }
+]
+[info] i  hosting[github-api-app-f4834]: finalizing version... 
+[debug] [2022-10-31T21:15:06.983Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions/7c4de743042a9745 updateMask=status%2Cconfig
+[debug] [2022-10-31T21:15:06.984Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions/7c4de743042a9745 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-10-31T21:15:09.575Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions/7c4de743042a9745 200
+[debug] [2022-10-31T21:15:09.577Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/versions/7c4de743042a9745 {"name":"projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-31T21:14:56.928483Z","createUser":{"email":"victorbernardpatrick@gmail.com"},"finalizeTime":"2022-10-31T21:15:09.466492Z","finalizeUser":{"email":"victorbernardpatrick@gmail.com"}}
+[debug] [2022-10-31T21:15:09.577Z] [hosting] finalized version for github-api-app-f4834:[object Object]
+[info] +  hosting[github-api-app-f4834]: version finalized 
+[info] i  hosting[github-api-app-f4834]: releasing new version... 
+[debug] [2022-10-31T21:15:09.584Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/channels/live/releases versionName=projects%2F958898516382%2Fsites%2Fgithub-api-app-f4834%2Fversions%2F7c4de743042a9745
+[debug] [2022-10-31T21:15:09.584Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/channels/live/releases {}
+[debug] [2022-10-31T21:15:11.894Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/channels/live/releases 200
+[debug] [2022-10-31T21:15:11.894Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/github-api-app-f4834/channels/live/releases {"name":"projects/958898516382/sites/github-api-app-f4834/channels/live/releases/1667250911154540","version":{"name":"projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-31T21:14:56.928483Z","createUser":{"email":"victorbernardpatrick@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu37mM740_ynz8UlaPHiSmAV0bvTG97SZuay4ZD54A"},"finalizeTime":"2022-10-31T21:15:09.466492Z","finalizeUser":{"email":"victorbernardpatrick@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu37mM740_ynz8UlaPHiSmAV0bvTG97SZuay4ZD54A"}},"type":"DEPLOY","releaseTime":"2022-10-31T21:15:11.154540333Z","releaseUser":{"email":"victorbernardpatrick@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu37mM740_ynz8UlaPHiSmAV0bvTG97SZuay4ZD54A"}}
+[debug] [2022-10-31T21:15:11.899Z] [hosting] release: {"name":"projects/958898516382/sites/github-api-app-f4834/channels/live/releases/1667250911154540","version":{"name":"projects/958898516382/sites/github-api-app-f4834/versions/7c4de743042a9745","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-31T21:14:56.928483Z","createUser":{"email":"victorbernardpatrick@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu37mM740_ynz8UlaPHiSmAV0bvTG97SZuay4ZD54A"},"finalizeTime":"2022-10-31T21:15:09.466492Z","finalizeUser":{"email":"victorbernardpatrick@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu37mM740_ynz8UlaPHiSmAV0bvTG97SZuay4ZD54A"}},"type":"DEPLOY","releaseTime":"2022-10-31T21:15:11.154540333Z","releaseUser":{"email":"victorbernardpatrick@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu37mM740_ynz8UlaPHiSmAV0bvTG97SZuay4ZD54A"}}
+[info] +  hosting[github-api-app-f4834]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/github-api-app-f4834/overview
+[info] Hosting URL: https://github-api-app-f4834.web.app
+[debug] [2022-10-31T21:15:19.457Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\DJ PATBERN\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -342,8 +342,9 @@ h2 {
 
     .home img {
       width: 60%;
-      height: 90vh;
+      height: 100vh;
       margin-left: 1%;
+      margin-bottom: 40%;
       
     }
 
@@ -359,7 +360,6 @@ h2 {
       box-shadow: 1.2px 2px 2px #918f8f;
       border-radius: 10px;
       margin-left: -45%;
-      margin-bottom: -20%;
     }
 
     .bomb-div{
