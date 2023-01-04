@@ -132,6 +132,39 @@ code {
   background-size: cover;
   height: 100vh;
 }
+/* PROFILE CSS */
+
+.profile-flex{
+  display: flex;
+  padding: 2%;
+  box-shadow: 1.2px 5px 5px #918f8f;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: rgb(175, 201, 218);
+  width: 100%;
+  color: rgb(16, 100, 156);
+}
+.profile-flex p{
+  margin-top: 10px;
+}
+
+
+
+.profile-flex a{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(9, 90, 144);
+  padding: 2%;
+  border-radius: 8px;
+}
+
+.profile-flex a:hover{
+  
+  color: rgb(9, 90, 144);
+  background-color: white;
+  
+
+}
 
 .repo-datas {
   padding: 2%;
@@ -394,6 +427,14 @@ h2 {
       margin-top: -20%;
     }
 
+    .profile-flex{
+      display: block;
+    }
+    .pro-img{
+     display: none;
+    }
+
+
 
     
 }
@@ -432,6 +473,10 @@ h2 {
   
   height: 90vh;
   margin-left: 1%;
+}
+
+.pro-img{
+  display: none;
 }
 
 .Link h2{

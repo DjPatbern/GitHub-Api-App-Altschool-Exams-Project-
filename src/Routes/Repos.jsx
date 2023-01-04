@@ -20,7 +20,7 @@ function Repos() {
       .then((response) => {
         setRepos(response.data);
         setLoading(true);
-      });
+      })
   }, []);
 
 
@@ -52,8 +52,8 @@ function Repos() {
                 .slice(pagesVisited, pagesVisited + reposPerPage)
                 .map((repo) => {
                   return (
-                    <Link to={`/repos/${repo.name}`} className="repo-links">
-                    <div key={repo.id} className="each-repo">
+                    <Link to={`/repos/${repo.name}`} key={repo.id} className="repo-links">
+                    <div  className="each-repo">
                       
                         {repo.name}
                       
